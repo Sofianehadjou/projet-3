@@ -33,15 +33,14 @@ section > div {
 	margin-bottom: 30px;
 }
 
-footer{
-	display: flex;
-	justify-content: space-around;
-	font-family: sans-serif;
-	background-color: #579c87;
-	color: #fdcb46; 
-}
+/*---corps de page---*/
 
-.menu-border{
+a{
+	text-decoration: none;
+	color: #3c1218;
+} 
+
+.bloc-menu{
 	display: flex;
 	flex-direction: column-reverse;
 	justify-content: center;
@@ -53,32 +52,66 @@ footer{
  	height: 520px;
     
 }
-.menu-border__1{
+.bloc-menu__1{
 	background-color: #fcdfdb;
 	font-family: 'Devonshire', cursive;
 	font-size: 2em;
 }
-
-.menu-border__1 > h2{
+.bloc-menu__1 > h2{
 	font-family: cursive;
 }
 
-.menu-border__2{
-	background-color: #f9f9f9;
-	font-family: cursive;
+.bloc-menu__2{
+	background-color: #f9f9f9;	
+	color: #0431df;
 }
-
-.menu-border__3{
+.bloc-menu__2 > h3{
+	font-family: 'Dancing Script', cursive;
+	font-size: 2em;
+	background-image: linear-gradient(to right, #0431df, #3d9ffa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.bloc-menu__3{
 	background-color: #fff5fe;
-	font-family:  ;
+	font-family: 'Kalam', cursive;
+	color: #c67412;
+
 }
 
-.menu-border__4{
+.bloc-menu__3 > h3{
+	font-size: 2em;
+	background-image: linear-gradient(to right, #df871e, #935df3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bloc-menu__4{
 	background-color: #fdfffd;
+	font-family: 'Kalam', cursive;
+	color: #3d9339;
+}
+
+.bloc-menu__4 > h3{
+	font-family: 'Kaushan Script', cursive;
+	font-size: 2em;
+	background-image: linear-gradient(to right, #3d9339, #bfff7e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 i{
 	font-size: 2em;
 	margin-top: -40px;
 	color: tomato;
+}
+
+/*---footer---*/
+
+footer{
+	display: flex;
+	justify-content: space-around;
+	font-family: sans-serif;
+	background-color: #579c87;
+	color: #fdcb46; 
 }
