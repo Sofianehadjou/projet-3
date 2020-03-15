@@ -2,6 +2,8 @@ body{
 	margin: auto;
 }
 
+
+/*---Header---*/
 header
 {
 	background-color: #579c87;
@@ -12,6 +14,14 @@ header
 	padding-bottom: 1em;
 }
 
+header > a{
+	text-decoration: none;
+	color: #fdcb46;
+}
+
+
+/*---MAIN---*/
+
 main{
 	display: flex;
 	justify-content: center;
@@ -20,84 +30,47 @@ main{
 main > div{
 	margin-top: 3em;
 }
-
-section > div {
-	background-color: #579c87;
-	color: #fdcb46;
-	text-align: center;
-	font-family: sans-serif;
-	width: 200px;
-	height: 35px;
-	margin: auto;
-	border-radius: 10px;
-	margin-bottom: 30px;
+ 
+a{
+	text-decoration: none;
+	color: #3c1218;	
 }
 
 /*---corps de page---*/
-
-a{
-	text-decoration: none;
-	color: #3c1218;
-} 
 
 .bloc-menu{
 	display: flex;
 	flex-direction: column-reverse;
 	justify-content: center;
 	align-items: center;
-	font-family: cursive;
 	box-shadow: 0px 0px 10px #e0d4d4;
 	margin: 35px;
  	width: 370px;
- 	height: 520px;
-    
+ 	height: 520px;   
 }
-.bloc-menu__1{
+
+.bloc-menu--modif{
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+	transition: transform 400ms;
+	transform: scale(1);
+}
+.bloc-menu--modif:hover{
+	transform: scale(1.15);
+}
+
+
+/*---MENU 1-- La note enchantée --*/
+
+.bloc-menu.bloc-menu__1{
 	background-color: #fcdfdb;
-	font-family: 'Devonshire', cursive;
-	font-size: 2em;
-}
-.bloc-menu__1 > h2{
 	font-family: cursive;
 }
 
-.bloc-menu__2{
-	background-color: #f9f9f9;	
-	color: #0431df;
-}
-.bloc-menu__2 > h3{
-	font-family: 'Dancing Script', cursive;
+.bloc-menu__1 > div > h3{
+	font-family:'Devonshire', cursive;
 	font-size: 2em;
-	background-image: linear-gradient(to right, #0431df, #3d9ffa);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.bloc-menu__3{
-	background-color: #fff5fe;
-	font-family: 'Kalam', cursive;
-	color: #c67412;
-
-}
-
-.bloc-menu__3 > h3{
-	font-size: 2em;
-	background-image: linear-gradient(to right, #df871e, #935df3);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.bloc-menu__4{
-	background-color: #fdfffd;
-	font-family: 'Kalam', cursive;
-	color: #3d9339;
-}
-
-.bloc-menu__4 > h3{
-	font-family: 'Kaushan Script', cursive;
-	font-size: 2em;
-	background-image: linear-gradient(to right, #3d9339, #bfff7e);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 i{
@@ -106,12 +79,83 @@ i{
 	color: tomato;
 }
 
+/*---MENU 2-- Le délice des papilles --*/
+
+.bloc-menu__2{
+	background-color: #f9f9f9;	
+	color: #0431df;
+}
+
+.bloc-menu__2 > div > h3{
+	font-family: 'Dancing Script', cursive;
+	font-size: 2em;
+	background-image: linear-gradient(to right, #0431df, #3d9ffa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*---MENU 3-- Le chic à la française --*/
+
+.bloc-menu.bloc-menu__3{
+	background-color: #fff5fe;
+	font-family: serif , cursive;
+	color: #c67412;
+}
+
+.bloc-menu__3 > div > h3{
+	font-size: 2em;
+	background-image: linear-gradient(to right, #df871e, #935df3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*---MENU 4-- La palette du goût --*/
+
+.bloc-menu__4{
+	background-color: #fdfffd;
+	font-family: 'Kalam', cursive;
+	color: #3d9339;
+}
+
+.bloc-menu__4 > div > h3{
+	font-family: 'Kaushan Script', cursive;
+	font-size: 2em;
+	background-image: linear-gradient(to right, #3d9339, #bfff7e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*--- SECTION ---*/
+
+section > div {
+	background-color: #579c87;
+	width: 250px;
+	height: 45px;
+	margin: auto;
+	border-radius: 10px;
+	margin-bottom: 150px;
+}
+section > div > h2{
+	font-family: 'inter', sans-serif;
+	text-align: center;
+	color: #fdcb46;
+	padding-top: 10px;
+}
+
+
 /*---footer---*/
 
 footer{
-	display: flex;
-	justify-content: space-around;
-	font-family: sans-serif;
+	font-family: 'inter', sans-serif;
 	background-color: #579c87;
 	color: #fdcb46; 
+	position: fixed;
+	left: 0; right: 0; bottom: 0px;
+	height: 80px;
 }
+
+footer > div {
+	display: flex;
+	justify-content: space-around;
+}
+
