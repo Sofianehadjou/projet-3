@@ -4,9 +4,10 @@
 	<!-- en tete de la page -->
 
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="page.css">
+	<link rel="stylesheet" href="style.css">
 	<script src="https://kit.fontawesome.com/48a92098b8.js" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css?family=Devonshire&display=swap" rel="stylesheet">
+	<link href="//db.onlinewebfonts.com/c/9cb830e3472ffe12fb4943f3ed80832f?family=Segoe+Print" rel="stylesheet" type="text/css"/> 
 
 	<title>Ohmyfood</title>
 </head>
@@ -14,23 +15,30 @@
 <!--corps de la page -->
 <body>
 
-	<header>
+	<header class="header__menu">
 		<a href="index.html">
-		<div id="logo">
-			<h1>Ohmyfood</h1>
-		</div>
+			<div id="logo">
+				<h1>Ohmyfood</h1>
+			</div>
 		</a>
 	</header>
 
-	<main>
+	<main class="main">
 
 		<h2>La note enchantée</h2>
 
 		<div class="bloc bloc__page1">
-			<div>
-				<img src="icon/music-note.png" alt="">
-				<h2>La note enchantée</h2>
+
+			<section>
 				<div>
+					<i class="fas fa-music"></i>
+					<h2>La note enchantée</h2>
+				</div>
+			</section>
+
+			<article>
+				<div>
+					<img class="ligne-verticale" src="icon/dessin.svg">
 					<h3>prélude</h3>
 					<p>Raviolis de foie gras accompagnés de leur crème à la truffe <span><strong>98€</strong></span></p>
 					<p>Caviar osciètre sur blini à la farine  de blé noir <span><strong>115€</strong></span></p>
@@ -51,22 +59,26 @@
 					<p>Baba au rhum revisité avec son coulis de citron</p>
 					<p>tarte au citron meringuée destructurée</p>
 				</div>
-			</div>
-			<div>
-				<i class="fas fa-music"></i>
-				<h2 class="icon-h2">La note enchantée</h2>
-			</div>
+			
+				<div>
+					<i class="fas fa-music"></i>
+					<h2 class="icon-h2">La note enchantée</h2>
+				</div>
+			</article>
 		</div>
-
-
-		
 	</main>
-	
-<!--Pied de page -->
-	<footer>
-		<h2>Mentions légales</h2>
-		<h2>Contactez-nous</h2>
-	</footer>
+
+		<!--Pied de page -->
+		<footer>
+			<div>
+				<a href="Mentions-légales.html">
+					<h2>Mentions légales</h2>
+				</a>
+				<a href="mailto:contact@ohmyfood.fr">
+					<h2>Contactez-nous</h2>
+				</a>
+			</div>
+		</footer>
 
 </body>
 </html>
