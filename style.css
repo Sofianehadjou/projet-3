@@ -54,19 +54,26 @@ header > a {
  	height: 600px;   
 
  	font-size: larger;
+ 	font-weight: normal;
 }
 
-.bloc-menu--modif {
+.bloc-menu h2{
+	font-size: 2.5rem;
+}
+
+.bloc-menu--anim {
 
 	display: flex;
 	flex-direction: column-reverse;
 	align-items: center;
-	
-	transition: transform 1000ms, color 300ms linear ease-in-out;
+	opacity: 1;
+
+	transition: transform 700ms ease-in-out;
 	transform: scale(1);
 }
-	.bloc-menu--modif:hover {
+	.bloc-menu--anim:hover {
 		transform: scale(1.15);
+		opacity: 0.7;
 	}
 
 
@@ -76,13 +83,12 @@ header > a {
 	background-color: #fcdfdb;
 	font-family: cursive;
 }
-	.bloc-menu__1:hover{
-		color: #3c121899;
-	}
 
 	.bloc-menu__1 > div > h3 {
 		font-family:'Devonshire', cursive;
+		font-weight: normal;
 		font-size: 2em;
+
 	}
 
 	i {
@@ -97,6 +103,7 @@ header > a {
 	font-family: 'Kalam', cursive;
 	background-color: #f9f9f9;	
 	color: #0431df;
+
 }
 
 	.bloc-menu__2 > div > h3 {
@@ -107,8 +114,8 @@ header > a {
 	    -webkit-background-clip: text;
 	    background-clip: text;
 	    -webkit-text-fill-color: transparent;
-	    color: transparent;
 	}
+	
 
 /*---MENU 3-- Le chic à la française --*/
 
@@ -123,6 +130,7 @@ header > a {
 
 		background-image: linear-gradient(to right, #df871e, #935df3);
 	    -webkit-background-clip: text;
+	   	background-clip: text;
 	    -webkit-text-fill-color: transparent;
 	}
 
@@ -152,6 +160,7 @@ header > a {
 	height: 45px;
 	margin: auto;
 	border-radius: 10px;
+
 	margin-bottom: 150px;
 }
 
@@ -161,13 +170,17 @@ header > a {
 		color: #fdcb46;
 		padding-top: 10px;
 	}
+.prochainement{
+	padding-top: 6px;
+}
 .prochainement:after {
-  overflow: hidden;
-  display: inline-block;
-  -webkit-animation: ellipsis steps(4,end) 900ms infinite;      
-  animation: ellipsis steps(4,end) 900ms infinite;
-  content: "\2026"; /* ascii code for the ellipsis character */
-  width: 0px;
+	position: absolute;
+	overflow: hidden;
+	 display: inline-block;
+
+ 	 -webkit-animation: ellipsis steps(4,end) 900ms infinite;      
+ 	 animation: ellipsis steps(4,end) 900ms infinite;
+ 	 content: "\2026";
 }
 
 @keyframes ellipsis {
@@ -206,24 +219,6 @@ footer {
 
 
 
-
-/*---RESPONSIVE DESIGN---*/
-
-@media all and (max-width: 992px)
-{
-	body{
-		width: auto;
-	}
-
-	main{	
-		width: auto;
-	}
-
-}
-
-
-
-
 /*-----les 4 pages des menus-----*/
 
 
@@ -242,46 +237,59 @@ footer {
 
 	box-shadow: 0px 0px 10px #e0d4d4;
 	width: 900px;
-	height: 1100px;
+	
 
 	margin: auto;
-	margin-bottom: 30px;	
+	padding-bottom: 10px;	
 }
 
 	.bloc > article{
-	margin-left: 100px;
-	margin-right: 100px;
+	margin-left: 80px;
+	margin-right: 80px;
 	}
 
-.ligne-verticale{
-	width: 210px;
-	margin-bottom: -238px;
-}
-.ligne-veticale--2{
-	width: 210px;
-	margin-top: -154px;
-	margin-left: 500px;
-}
+	.bloc h3{
+		text-align: center;
+		display: flex;
+		justify-content: space-between;
+	}
 
-/*---en tête---*/
-
-
-
-/*---MENU 1-- La note enchantée --*/
+/*--- PAGE MENU 1-- La note enchantée --*/
 
 .bloc.bloc__page1{
 	background-color: #fcdfdb;
     font-family: 'Segoe Print', cursive;
 }
 
-.bloc.bloc__page1 > div > h2{
+.bloc.bloc__page1 h2{
 	font-family:'Devonshire', cursive;
 }
+.bloc__page1--h3{
+	text-align: center;
+	
+}
 
+.bloc__page1--h3:before, .bloc__page1--h3:after{
+	content:"";
+   display:inline-block;
+   width:200px;
+   height:15px;
+   background:url("icon/ligne-menu-1.png") no-repeat;
+   background-size:100%;
+   align-self: center;
+}
 
-h{
+.bloc__page1--h3:hover{
+	text-decoration: underline;
+}
 
-	background: url("icon/dessin.svg") fixed repeat-x top right;
+.bloc__page1--icon{
+	display: flex;
+	justify-content: center;
+}
+.bloc__page1--icon > i{
+	margin-top: 20px;
+	margin-right: 10px;
 }
 
  p > span {
@@ -289,7 +297,7 @@ h{
  	flex-direction: row-reverse;
  	margin-top: -20px;
  }
-.main i {
+section i {
 		margin-left: 50%;
 		font-size: 2em;
 		color: tomato;
@@ -298,7 +306,7 @@ h{
 	}
 
 
-/*---MENU 2-- Le délice des papilles --*/
+/*---PAGE MENU 2-- Le délice des papilles --*/
 
 .bloc.bloc__page2{
 	background-color: #edefef;
@@ -306,7 +314,7 @@ h{
 	font-family: 'Segoe Print', cursive;
 }
 
-.bloc.bloc__page2 > div > h2{
+.bloc.bloc__page2 h2{
 	font-family: 'Dancing Script', cursive;
 	font-size: 2.5em;
 	color: #3d1319;	
@@ -315,14 +323,28 @@ h{
     -webkit-text-fill-color: transparent;
 }
 
-/*---MENU 3-- Le chic à la française --*/
+.bloc__page2--h3:before, .bloc__page2--h3:after{
+	content:"";
+   display:inline-block;
+   width:200px;
+   height:15px;
+   background:url("icon/ligne-menu-2.png") no-repeat;
+   background-size:100%;
+   align-self: center;
+
+}
+.bloc__page2--h3:after{
+	transform: scaleX(-1);
+}
+
+/*---PAGE MENU 3-- Le chic à la française --*/
 
 .bloc.bloc__page3{
 	background-color: #fff5fe;
 	padding-top: 30px;
 	font-family: 'bree serif', serif;
 }
-.bloc.bloc__page3 > h2{
+.bloc.bloc__page3 h2{
 	background-image: linear-gradient(to right, #df871e, #935df3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -333,7 +355,64 @@ h{
 
 .bloc__page3--entrée{
 	color: #c67412;	
+
 }
+	.bloc__page3--entrée--h3:before, .bloc__page3--entrée--h3:after{
+		content:"";
+	   display:inline-block;
+	   width:200px;
+	   height:15px;
+	   background:url("icon/ligne-menu-3-1.png") no-repeat;
+	   background-size:100%;
+	   align-self: center;
+	}
+
+	.bloc__page3--entrée--h3:after{
+		transform: scaleX(-1);
+	}
+
+	.bloc__page3--plat--h3:before, .bloc__page3--plat--h3:after{
+		content:"";
+	   display:inline-block;
+	   width:200px;
+	   height:15px;
+	   background:url("icon/ligne-menu-3-2.png") no-repeat;
+	   background-size:100%;
+	   align-self: center;
+	}
+
+	.bloc__page3--plat--h3:after{
+		transform: scaleX(-1);
+	}
+	.bloc__page3--dessert--h3:before, .bloc__page3--dessert--h3:after{
+		content:"";
+	   display:inline-block;
+	   width:200px;
+	   height:15px;
+	   background:url("icon/ligne-menu-3-3.png") no-repeat;
+	   background-size:100%;
+	   align-self: center;
+	}
+
+	.bloc__page3--dessert--h3:after{
+		transform: scaleX(-1);
+	}
+
+	.bloc__page4--h3:before, .bloc__page4--h3:after{
+		content:"";
+	   display:inline-block;
+	   width:250px;
+	   height:15px;
+	   background:url("icon/ligne-menu-4.png") no-repeat;
+	   background-size:100%;
+	   align-self: center;
+	}
+
+	.bloc__page4--h3:after{
+		transform: scaleX(-1);
+	}
+	
+
 .bloc__page3--plat{
 	color: #a56799;
 	margin-top: 70px;
@@ -343,7 +422,7 @@ h{
 	margin-top: 70px;
 }
 
-/*---MENU 4-- La palette du goût --*/
+/*---PAGE MENU 4-- La palette du goût --*/
 
 .bloc.bloc__page4{
 	background-color: #fdfffd;
@@ -351,7 +430,7 @@ h{
 	font-family: 'Segoe Print', serif;
 }
 
-.bloc.bloc__page4 > div > h2{
+.bloc.bloc__page4 h2{
 	font-family: 'Kaushan Script', cursive;
 	font-size: 2.5em;
 	background-image: linear-gradient(to right, #3d9339, #bfff7e);
@@ -369,3 +448,24 @@ h{
 
 /*---Footer---*/
 
+
+
+
+
+/*---RESPONSIVE DESIGN---*/
+
+@media all and (max-width: 992px)
+{
+	body{
+		width: auto;
+	}
+	header{
+		width: auto;
+	}
+	main{	
+		width: auto;
+	}
+	.main__accueil{
+		display: grid;
+	}
+}

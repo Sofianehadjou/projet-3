@@ -11,26 +11,33 @@ main h2{
 }
 
 .bloc{
-	box-shadow: 0px 0px 10px #e0d4d4;
-	width: 750px;
-	height: 850px;
-	margin: auto;
-	margin-bottom: 30px;
 	align-content: center;
+	font-size: larger;
+
+	box-shadow: 0px 0px 10px #e0d4d4;
+	width: 900px;
+	height: 1100px;
+
+	margin: auto;
+	margin-bottom: 30px;	
 }
 
-.bloc > div{
+	.bloc > article{
 	margin-left: 100px;
 	margin-right: 100px;
+	}
+
+.ligne-verticale{
+	width: 210px;
+	margin-bottom: -238px;
+}
+.ligne-veticale--2{
+	width: 210px;
+	margin-top: -154px;
+	margin-left: 500px;
 }
 
 /*---en tête---*/
-
-header > a{
-	text-decoration: none;
-	color: #fdcb46;
-}
-
 header{
 	background-color: #579c87;
 	color:#fdcb46;
@@ -40,26 +47,47 @@ header{
 	padding-bottom: 1em;
 }
 
-/*---page 1---*/
+header > a{
+	text-decoration: none;
+	color: #fdcb46;
+}
+
+
+/*---MENU 1-- La note enchantée --*/
 
 .bloc.bloc__page1{
 	background-color: #fcdfdb;
+    font-family: 'Segoe Print', cursive;
 }
 
-.bloc > div > h3{
-	text-align: center;
+.bloc.bloc__page1 > div > h2{
+	font-family:'Devonshire', cursive;
 }
 
-h3:before, h3:after{
-	content:''; display:inline-block; vertical-align: middle; width: 8rem; height: 2px; background: #000 }
-h3:before { margin-right: 2rem }
-h3:after { margin-left: 2rem }
+h3 {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+h3:before, h3:after {
+    position: absolute;
+    top: 51%;
+    overflow: hidden;
 
+    margin-right: 50px;
+    margin-left: 30px;
+    background-image: url("icon/dessin.svg");
+	background-position: 0px, 0px;
+	background-repeat: repeat-x;
+}
+h3:before {
+    margin-left: -54%;
+    text-align: right;
+}
 
-img{
-	width: 55px;
-	padding-top: 20px;
-	padding-left: 50%;
+h{
+
+	background: url("icon/dessin.svg") fixed repeat-x top right;
 }
 
  p > span{
@@ -67,13 +95,21 @@ img{
  	flex-direction: row-reverse;
  	margin-top: -20px;
  }
+i {
+		margin-left: 50%;
+		font-size: 2em;
+		color: tomato;
 
-/*---page 2---*/
+		margin-top: 50px;
+	}
+
+
+/*---MENU 2-- Le délice des papilles --*/
 
 .bloc.bloc__page2{
 	background-color: #edefef;
 	padding-top: 30px;
-	font-family: cursive;
+	font-family: 'Segoe Print', cursive;
 }
 
 .bloc.bloc__page2 > div > h2{
@@ -85,12 +121,12 @@ img{
     -webkit-text-fill-color: transparent;
 }
 
-/*---page 3---*/
+/*---MENU 3-- Le chic à la française --*/
 
 .bloc.bloc__page3{
 	background-color: #fff5fe;
 	padding-top: 30px;
-	font-size: 'bree serif', serif;
+	font-family: 'bree serif', serif;
 }
 .bloc.bloc__page3 > h2{
 	background-image: linear-gradient(to right, #df871e, #935df3);
@@ -112,11 +148,13 @@ img{
 	color: #6e4ccc;
 	margin-top: 70px;
 }
-/*---page 4---*/
+
+/*---MENU 4-- La palette du goût --*/
 
 .bloc.bloc__page4{
 	background-color: #fdfffd;
 	padding-top: 30px;
+	font-family: 'Segoe Print', serif;
 }
 
 .bloc.bloc__page4 > div > h2{
@@ -127,17 +165,31 @@ img{
     -webkit-text-fill-color: transparent;
 }
 
+/*--- Mentions légales ---*/
+.mentions-légales{
+	width: 60%;
+	margin: auto;
+	text-align: justify;
+	font-size: larger;
+}
 
 /*---Footer---*/
 
 footer{
-	display: flex;
-	justify-content: space-around;
 	font-family: sans-serif;
 	background-color: #579c87;
 	color: #fdcb46;
 	position: fixed;
 	left: 0; right: 0; bottom: 0;
-	height: 80px;
-  	
+	height: 80px; 	
+}
+
+footer > div {
+	display: flex;
+	justify-content: space-around;
+}
+
+footer > div > a{
+	text-decoration: none;
+	color: #fdcb46;
 }
