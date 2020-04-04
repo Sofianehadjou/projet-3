@@ -1,24 +1,26 @@
 /*---les variables coleurs---*/
 $color-fond: #579c87;
-$color-text: #fdcb46;
+$color-text: #fdcb46; 
 $color-bk-menu1: #fcdfdb;
 $color-bk-menu2: #f9f9f9;
 $color-txt-menu2: #0431df;
 $color-bk-menu3: #fff5fe;
 $color-txt-menu3: #c67412;
+$color-txt-menu3-plat: #a56799;
+$color-txt-menu3-dessert: #6e4ccc;
 $color-bk-menu4: #fdfffd;
 $color-txt-menu4: #3d9339;
+$background:url("icon/ligne-menu-.png") no-repeat;
 
 /*---Les mixins---*/
 @mixin flexMid {
     display: flex;
-    justify-content: center;
+    justify-content: center;    
     align-content: center;
 }
 
 @mixin gradient {
     -webkit-background-clip: text;
-    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -43,63 +45,52 @@ $color-txt-menu4: #3d9339;
         width: 1.50em;
     }
 }
-
+/*Animation rubrique mentions légales et contact sous forme de 'wiggle'*/
 @keyframes wiggle{
-    0%{transform: rotate(0deg) ;}
+    0%{transform: rotate(0deg);}
     2%{transform: rotate(-2deg);}
     4%{transform: rotate(2deg);}
     5%{transform: rotate(0deg);}
     10%{transform: rotate(-2deg);}
     50%{transform: rotate(2deg);}
-    100%{transform: rotate();}
+    100%{transform: rotate(0deg);}
 }
 
+/*Animation difilement 3 points*/
 @keyframes point1 {
     0% {
         transform: translateX(0px);
     }
     50% {
-        transform: translateX(0px);
+        transform: translateX(1px);
     }
     100% {
-        transform: translateX(0px);
+        transform: translateX(2px);
     }
 }
 @keyframes point2 {
     0% {
-        transform: translateX(0px);
+        transform: translateX(5px);
     }
     50% {
-        transform: translateX(2px);
+        transform: translateX(7px);
     }
     100% {
-        transform: translateX(4px);
+        transform: translateX(9px);
     }
 }
 @keyframes point3 {
     0% {
-        transform: translateX(10px);
+        transform: translateX(11px);
     }
     50% {
-        transform: translateX(12px);
+        transform: translateX(13px);
     }
     100% {
-        transform: translateX(14px);
+        transform: translateX(15px);
     }
 }
 
-@keyframes titre{
-    
-    0% {
-        transform: translateX(10px);
-    }
-    50% {
-        transform: translateX(12px);
-    }
-    100% {
-        transform: translateX(14px);
-    }
-}
 
 /*---Site---*/
 
@@ -153,8 +144,7 @@ a {
      font-weight: normal;
      
      .bloc-menu--anim {
-
-        display: flex;
+        @include flexMid; 
         flex-direction: column-reverse;
         align-items: center;
         opacity: 1;
@@ -167,17 +157,18 @@ a {
             opacity: 0.7;
         }
 
-    h2{
-          font-size: 2.5rem;
-      }
+            h2{
+                font-size: 2.5rem;
+            }
 }
 
 /*---MENU 1-- La note enchantée --*/
 
 .bloc-menu__1 {
 	background-color: $color-bk-menu1;
-	font-family: cursive;
-	  h3 {
+    font-family: cursive;
+    
+	h3 {
 		font-family:'Devonshire', cursive;
 		font-weight: normal;
 		font-size: 2em;
@@ -197,7 +188,7 @@ a {
 	background-color: $color-bk-menu2;	
 	color: $color-txt-menu2 ;
 
-	 h3 {
+	h3 {
 		font-family: 'Dancing Script', cursive;
 		font-size: 2em;
 
@@ -233,7 +224,7 @@ a {
 		font-size: 2em;
 
 		background-image: linear-gradient(to right, #3d9339, #bfff7e);
-        @include gradient;
+        @include gradient
     }
 }
 
@@ -250,7 +241,7 @@ a {
     
     font-family: 'inter', sans-serif;
     text-align: center;
-    color: #fdcb46;
+    color: $color-text;
 
     .prochainement{
         padding: 10px;
@@ -260,22 +251,22 @@ a {
             position: absolute;
         	overflow: hidden;
 	         display: inline-block;
-            animation: point1 steps(4,end) 900ms infinite;
+            animation: point1 steps(1,end) 900ms infinite;
             
         }
         .point2{
             position: absolute;
         	overflow: hidden;
 	         display: inline-block;
-            animation: point2 steps(4,end) 900ms infinite;
+            animation: point2 steps(1,end) 900ms infinite;
 
         }
         .point3{
             position: absolute;
         	overflow: hidden;
-	         display: inline-block;
-            animation: point3 steps(4,end) 900ms infinite;
-
+            display: inline-block;
+            animation: point3 steps(1,end) 900ms infinite;
+            
         }
     }
 
@@ -305,7 +296,7 @@ footer {
 
 .mentions:hover,.contact:hover{
     animation: wiggle 3s infinite;
-
+    
 }
 	
 
@@ -343,7 +334,7 @@ footer {
         margin-right: 80px;
      }
 
-     h3{
+    h3{
         @include flexMid;
 		justify-content: space-between;
 	}
@@ -357,23 +348,26 @@ footer {
 
     h2{
         font-family:'Devonshire', cursive;
+        margin-bottom: 3em;
     }
 
     .bloc__page1--h3{
-        text-align: center;	
+        text-align: center;	 
     }
-    
 
     .bloc__page1--h3:before, .bloc__page1--h3:after{
         background:url("icon/ligne-menu-1.png") no-repeat;
-        @include ligne-verticale;
-        
+        @include ligne-verticale;    
     }
-    
-    .bloc__page1--h3:hover{
-        text-decoration: underline;
-        
+
+    .bloc__page1--h3--underline{  /* soulignement des titres*/
+        text-decoration: none;
+        background: linear-gradient(to top, black 5%, transparent 10%) no-repeat left bottom / 0 100%;
+        transition: background-size .5s;
     }
+        .bloc__page1--h3--underline:hover{
+            background-size: 100% 100%;
+        }
 }
 
 .bloc__page1--icon{
@@ -404,23 +398,36 @@ section i {
 	padding-top: 30px;
 	font-family: 'Segoe Print', cursive;
 
-     h2{
+    h2{
         font-family: 'Dancing Script', cursive;
         font-size: 2.5em;
         color: #3d1319;
         
         background-image: linear-gradient(to right, #0431df, #3d9ffa);
         @include gradient;
+
+        margin-bottom: 2em;
     }
+
+    .bloc__page2--h3:before, .bloc__page2--h3:after{
+        background:url("icon/ligne-menu-2.png") no-repeat;
+        @include ligne-verticale;
+    }
+    .bloc__page2--h3:after{
+        transform: scaleX(-1);
+    }
+
+    .bloc__page2--h3--underline{  /* soulignement des titres*/
+        text-decoration: none;
+        background: linear-gradient(to top, $color-txt-menu2 5%, transparent 10%) no-repeat left bottom / 0 100%;
+        transition: background-size .5s;
+    }
+        .bloc__page2--h3--underline:hover{
+            background-size: 100% 100%;
+        }
 }
 
-.bloc__page2--h3:before, .bloc__page2--h3:after{
-    background:url("icon/ligne-menu-2.png") no-repeat;
-	@include ligne-verticale;
-}
-    .bloc__page2--h3:after{
-	    transform: scaleX(-1);
-}
+
 
 
 /*---PAGE MENU 3-- Le chic à la française --*/
@@ -434,17 +441,18 @@ section i {
         background-image: linear-gradient(to right, #df871e, #935df3);
         @include gradient;
         font-family: 'Croissant One', cursive;
+        margin-bottom: 3em;
     }
 
-    .bloc__page3--entrée{
-        color: #c67412;	
+    .bloc__page3--entree{
+        color: $color-txt-menu3;	
     
     }
-        .bloc__page3--entrée--h3:before, .bloc__page3--entrée--h3:after{
+        .bloc__page3--entree--h3:before, .bloc__page3--entree--h3:after{
             background:url("icon/ligne-menu-3-1.png") no-repeat;
             @include ligne-verticale;
         }
-        .bloc__page3--entrée--h3:after{
+        .bloc__page3--entree--h3:after{
             transform: scaleX(-1);
         }
     
@@ -463,16 +471,42 @@ section i {
         .bloc__page3--dessert--h3:after{
             transform: scaleX(-1);
         }
+
+            .bloc__page3--h3--entree--underline{  /* soulignement des titres*/
+                text-decoration: none;
+                background: linear-gradient(to top, $color-txt-menu3 5%, transparent 10%) no-repeat left bottom / 0 100%;
+                transition: background-size .5s;
+            }
+                .bloc__page3--h3--entree--underline:hover{
+                        background-size: 100% 100%;
+                    }
     
     
     .bloc__page3--plat{
-        color: #a56799;
+        color: $color-txt-menu3-plat;
         margin-top: 70px;
     }
+        .bloc__page3--h3--plat--underline{  /* soulignement des titres*/
+            text-decoration: none;
+            background: linear-gradient(to top, $color-txt-menu3-plat 5%, transparent 10%) no-repeat left bottom / 0 100%;
+            transition: background-size .5s;
+        }
+            .bloc__page3--h3--plat--underline:hover{
+                    background-size: 100% 100%;
+                }
+
     .bloc__page3--dessert{
-        color: #6e4ccc;
+        color: $color-txt-menu3-dessert;
         margin-top: 70px;
     }
+        .bloc__page3--h3--dessert--underline{  /* soulignement des titres*/
+            text-decoration: none;
+            background: linear-gradient(to top, $color-txt-menu3-dessert 5%, transparent 10%) no-repeat left bottom / 0 100%;
+            transition: background-size .5s;
+        }
+            .bloc__page3--h3--dessert--underline:hover{
+                    background-size: 100% 100%;
+                }
 }    
 /*---PAGE MENU 4-- La palette du goût --*/
 
@@ -480,9 +514,11 @@ section i {
 	background-color: #fdfffd;
 	padding-top: 30px;
     font-family: 'Segoe Print', serif;
+
     h2{
         font-family: 'Kaushan Script', cursive;
         font-size: 2.5em;
+        margin-bottom: 2em;
         background-image: linear-gradient(to right, #3d9339, #bfff7e);
         @include gradient;
     }
@@ -491,12 +527,21 @@ section i {
         @include ligne-verticale;
     }
     .bloc__page4--h3:after{
-        transform: scaleX(-1);
+        transform: scaleX(-1);        
     }
+
+    .bloc__page4--h3--underline{  /* soulignement des titres*/
+        text-decoration: none;
+        background: linear-gradient(to top, $color-txt-menu4 5%, transparent 10%) no-repeat left bottom / 0 100%;
+        transition: background-size .5s;
+    }
+        .bloc__page4--h3--underline:hover{
+                background-size: 100% 100%;
+            }
 }
 
  /*--- Mentions légales ---*/
- .mentions-légales{
+ .mentions-legales{
 	width: 60%;
 	margin: auto;
 	text-align: justify;
