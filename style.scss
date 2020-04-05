@@ -103,7 +103,6 @@ header {
     
 	background-color: $color-fond;
     color:$color-text;
-    font-size: 24px;
     font-family: sans-serif;
     
      a {
@@ -163,6 +162,7 @@ a {
 }
 
 /*---MENU 1-- La note enchantée --*/
+
 
 .bloc-menu__1 {
 	background-color: $color-bk-menu1;
@@ -563,18 +563,20 @@ section i {
 {
 	body{
 		width: auto;
-	}
-	header{
-		padding: 1px;
-		margin: auto;
-	}
+    }
+    .header_page{
+        font-size: 4vw;
+    }
+
 	main{	
 		width: auto;
-	}
+    }
+    
 	.main__accueil{
 		display: flex;
 		flex-direction: column;
-	}
+    }
+    
 	.main__accueil > div{
 		margin-top: 0em;
 	}
@@ -583,10 +585,35 @@ section i {
 		width: 85vw;
 		height: 110vw;
 		text-align: center;
-	}
+    }
+    .bloc{
+        width: 85vw;
+        article{
+            margin-left: 40px;
+            margin-right: 40px;
+        }
 
-	footer > div{
+        h3{
+            font-size: 4vw;
+        }  
 
-		}
+            p{
+                font-size: 2vw;
+                margin: inherit;
+            }
+            span{
+                font-size: 3vw;
+            }
+    }
+ 
+
+    footer{
+        @include flexMid;
+        height:100px;
+
+        div{
+            display: block;
+        }
+    }
 
 }

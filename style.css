@@ -519,7 +519,11 @@ section i {
     width: auto;
   }
 
-  y main {
+  .header_page {
+    font-size: 4vw;
+  }
+
+  main {
     width: auto;
   }
 
@@ -540,18 +544,20 @@ section i {
 
   .bloc {
     width: 85vw;
-    font-size: 3vw;
   }
   .bloc article {
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
   }
   .bloc h3 {
-    font-size: 3vw;
+    font-size: 4vw;
   }
   .bloc p {
-    font-size: 3vw;
+    font-size: 2vw;
     margin: inherit;
+  }
+  .bloc span {
+    font-size: 3vw;
   }
 
   footer {
