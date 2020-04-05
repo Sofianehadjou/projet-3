@@ -104,6 +104,7 @@ header {
 	background-color: $color-fond;
     color:$color-text;
     font-family: sans-serif;
+    font-size: 20px;
     
      a {
         text-decoration: none;
@@ -375,7 +376,7 @@ footer {
     justify-content: center;
 
     i{
-        margin-top: 20px;
+        margin-top: 30px;
         margin-right: 10px;
         font-size: 25px;
         color: tomato;
@@ -571,6 +572,11 @@ section i {
 	main{	
 		width: auto;
     }
+    
+    section i{
+        margin-left: 0%;
+    }
+
     .main h2{
         font-size: 7vw;
     }
@@ -625,11 +631,11 @@ section i {
  
 
     footer{
-        @include flexMid;
-        height:100px;
-
-        div{
-            display: block;
+        font-size: 3.5vw;
+        letter-spacing: -0.074em;
+        height:85px;
+        h2{
+            padding-top: 10px;
         }
     }
 
