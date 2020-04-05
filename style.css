@@ -2,17 +2,6 @@
 /*---les variables coleurs---*/
 /*---Les mixins---*/
 /*---Keyframs---*/
-@-webkit-keyframes trois-points {
-  0% {
-    width: 1em;
-  }
-  50% {
-    width: 1.25em;
-  }
-  100% {
-    width: 1.50em;
-  }
-}
 @keyframes trois-points {
   0% {
     width: 1em;
@@ -21,182 +10,80 @@
     width: 1.25em;
   }
   100% {
-    width: 1.50em;
+    width: 1.5em;
   }
 }
-
 /*Animation rubrique mentions légales et contact sous forme de 'wiggle'*/
-@-webkit-keyframes wiggle {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  2% {
-    -webkit-transform: rotate(-2deg);
-            transform: rotate(-2deg);
-  }
-  4% {
-    -webkit-transform: rotate(2deg);
-            transform: rotate(2deg);
-  }
-  5% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  10% {
-    -webkit-transform: rotate(-2deg);
-            transform: rotate(-2deg);
-  }
-  50% {
-    -webkit-transform: rotate(2deg);
-            transform: rotate(2deg);
-  }
-  100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-}
 @keyframes wiggle {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   2% {
-    -webkit-transform: rotate(-2deg);
-            transform: rotate(-2deg);
+    transform: rotate(-2deg);
   }
   4% {
-    -webkit-transform: rotate(2deg);
-            transform: rotate(2deg);
+    transform: rotate(2deg);
   }
   5% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   10% {
-    -webkit-transform: rotate(-2deg);
-            transform: rotate(-2deg);
+    transform: rotate(-2deg);
   }
   50% {
-    -webkit-transform: rotate(2deg);
-            transform: rotate(2deg);
+    transform: rotate(2deg);
   }
   100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
-
 /*Animation difilement 3 points*/
-@-webkit-keyframes point1 {
-  0% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
-  50% {
-    -webkit-transform: translateX(1px);
-            transform: translateX(1px);
-  }
-  100% {
-    -webkit-transform: translateX(2px);
-            transform: translateX(2px);
-  }
-}
 @keyframes point1 {
   0% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    transform: translateX(0px);
   }
   50% {
-    -webkit-transform: translateX(1px);
-            transform: translateX(1px);
+    transform: translateX(1px);
   }
   100% {
-    -webkit-transform: translateX(2px);
-            transform: translateX(2px);
+    transform: translateX(2px);
   }
 }
-
-@-webkit-keyframes point2 {
-  0% {
-    -webkit-transform: translateX(5px);
-            transform: translateX(5px);
-  }
-  50% {
-    -webkit-transform: translateX(7px);
-            transform: translateX(7px);
-  }
-  100% {
-    -webkit-transform: translateX(9px);
-            transform: translateX(9px);
-  }
-}
-
 @keyframes point2 {
   0% {
-    -webkit-transform: translateX(5px);
-            transform: translateX(5px);
+    transform: translateX(5px);
   }
   50% {
-    -webkit-transform: translateX(7px);
-            transform: translateX(7px);
+    transform: translateX(7px);
   }
   100% {
-    -webkit-transform: translateX(9px);
-            transform: translateX(9px);
+    transform: translateX(9px);
   }
 }
-
-@-webkit-keyframes point3 {
-  0% {
-    -webkit-transform: translateX(11px);
-            transform: translateX(11px);
-  }
-  50% {
-    -webkit-transform: translateX(13px);
-            transform: translateX(13px);
-  }
-  100% {
-    -webkit-transform: translateX(15px);
-            transform: translateX(15px);
-  }
-}
-
 @keyframes point3 {
   0% {
-    -webkit-transform: translateX(11px);
-            transform: translateX(11px);
+    transform: translateX(11px);
   }
   50% {
-    -webkit-transform: translateX(13px);
-            transform: translateX(13px);
+    transform: translateX(13px);
   }
   100% {
-    -webkit-transform: translateX(15px);
-            transform: translateX(15px);
+    transform: translateX(15px);
   }
 }
-
 /*---Site---*/
 body {
   margin: auto;
 }
 
 header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  justify-content: center;
+  align-content: center;
   background-color: #579c87;
   color: #fdcb46;
-  font-size: 24px;
   font-family: sans-serif;
 }
-
 header a {
   text-decoration: none;
   color: #fdcb46;
@@ -204,16 +91,10 @@ header a {
 
 /*---MAIN---*/
 .main__accueil {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  justify-content: center;
+  align-content: center;
 }
-
 .main__accueil div {
   margin-top: 3em;
 }
@@ -225,59 +106,32 @@ a {
 
 /*---corps de page---*/
 .bloc-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column-reverse;
   border-radius: 3px;
-  -webkit-box-shadow: 0px 0px 10px #e0d4d4;
-          box-shadow: 0px 0px 10px #e0d4d4;
+  box-shadow: 0px 0px 10px #e0d4d4;
   margin: 35px;
   width: 430px;
   height: 600px;
   font-size: larger;
   font-weight: normal;
 }
-
 .bloc-menu .bloc-menu--anim {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column-reverse;
+  align-items: center;
   opacity: 1;
-  -webkit-transition: -webkit-transform 700ms ease-in-out;
-  transition: -webkit-transform 700ms ease-in-out;
   transition: transform 700ms ease-in-out;
-  transition: transform 700ms ease-in-out, -webkit-transform 700ms ease-in-out;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
 }
-
 .bloc-menu .bloc-menu--anim:hover {
-  -webkit-transform: scale(1.15);
-          transform: scale(1.15);
+  transform: scale(1.15);
   opacity: 0.7;
 }
-
 .bloc-menu h2 {
   font-size: 2.5rem;
 }
@@ -287,13 +141,11 @@ a {
   background-color: #fcdfdb;
   font-family: cursive;
 }
-
 .bloc-menu__1 h3 {
-  font-family: 'Devonshire', cursive;
+  font-family: "Devonshire", cursive;
   font-weight: normal;
   font-size: 2em;
 }
-
 .bloc-menu__1 i {
   font-size: 2em;
   margin-top: -40px;
@@ -302,15 +154,13 @@ a {
 
 /*---MENU 2-- Le délice des papilles --*/
 .bloc-menu__2 {
-  font-family: 'Kalam', cursive;
+  font-family: "Kalam", cursive;
   background-color: #f9f9f9;
   color: #0431df;
 }
-
 .bloc-menu__2 h3 {
-  font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
   font-size: 2em;
-  background-image: -webkit-gradient(linear, left top, right top, from(#0431df), to(#3d9ffa));
   background-image: linear-gradient(to right, #0431df, #3d9ffa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -319,13 +169,11 @@ a {
 /*---MENU 3-- Le chic à la française --*/
 .bloc-menu__3 {
   background-color: #fff5fe;
-  font-family: serif , cursive;
+  font-family: serif, cursive;
   color: #c67412;
 }
-
 .bloc-menu__3 h3 {
   font-size: 2em;
-  background-image: -webkit-gradient(linear, left top, right top, from(#c67412), to(#935df3));
   background-image: linear-gradient(to right, #c67412, #935df3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -334,14 +182,12 @@ a {
 /*---MENU 4-- La palette du goût --*/
 .bloc-menu__4 {
   background-color: #fdfffd;
-  font-family: 'Kalam', cursive;
+  font-family: "Kalam", cursive;
   color: #3d9339;
 }
-
 .bloc-menu__4 h3 {
-  font-family: 'Kaushan Script', cursive;
+  font-family: "Kaushan Script", cursive;
   font-size: 2em;
-  background-image: -webkit-gradient(linear, left top, right top, from(#3d9339), to(#bfff7e));
   background-image: linear-gradient(to right, #3d9339, #bfff7e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -355,42 +201,35 @@ a {
   margin: auto;
   margin-bottom: 100px;
   border-radius: 10px;
-  font-family: 'inter', sans-serif;
+  font-family: "inter", sans-serif;
   text-align: center;
   color: #fdcb46;
 }
-
 .section .prochainement {
   padding: 10px;
 }
-
 .section .point1 {
   position: absolute;
   overflow: hidden;
   display: inline-block;
-  -webkit-animation: point1 steps(1, end) 900ms infinite;
-          animation: point1 steps(1, end) 900ms infinite;
+  animation: point1 steps(1, end) 900ms infinite;
 }
-
 .section .point2 {
   position: absolute;
   overflow: hidden;
   display: inline-block;
-  -webkit-animation: point2 steps(1, end) 900ms infinite;
-          animation: point2 steps(1, end) 900ms infinite;
+  animation: point2 steps(1, end) 900ms infinite;
 }
-
 .section .point3 {
   position: absolute;
   overflow: hidden;
   display: inline-block;
-  -webkit-animation: point3 steps(1, end) 900ms infinite;
-          animation: point3 steps(1, end) 900ms infinite;
+  animation: point3 steps(1, end) 900ms infinite;
 }
 
 /*---footer---*/
 footer {
-  font-family: 'inter', sans-serif;
+  font-family: "inter", sans-serif;
   color: #fdcb46;
   background-color: #579c87;
   position: fixed;
@@ -399,95 +238,67 @@ footer {
   bottom: 0px;
   height: 80px;
 }
-
 footer div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-left: 25px;
   margin-right: 25px;
 }
-
 footer a {
   color: #fdcb46;
   text-decoration: none;
 }
 
 .mentions:hover, .contact:hover {
-  -webkit-animation: wiggle 3s infinite;
-          animation: wiggle 3s infinite;
+  animation: wiggle 3s infinite;
 }
 
 /*-----les 4 pages -menus-----*/
 .main {
   margin-bottom: 120px;
 }
-
 .main h2 {
   font-family: sans-serif;
   text-align: center;
 }
 
 .bloc {
-  -ms-flex-line-pack: center;
-      align-content: center;
+  align-content: center;
   font-size: larger;
   border-radius: 3px;
-  -webkit-box-shadow: 0px 0px 10px #e0d4d4;
-          box-shadow: 0px 0px 10px #e0d4d4;
+  box-shadow: 0px 0px 10px #e0d4d4;
   width: 900px;
   margin: auto;
   padding-bottom: 10px;
 }
-
 .bloc span {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  flex-direction: row-reverse;
   margin-top: -20px;
 }
-
 .bloc article {
   margin-left: 80px;
   margin-right: 80px;
 }
-
 .bloc h3 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: center;
+  align-content: center;
+  justify-content: space-between;
 }
 
 /*--- PAGE MENU 1-- La note enchantée --*/
 .bloc__page1 {
   background-color: #fcdfdb;
-  font-family: 'Segoe Print', cursive;
+  font-family: "Segoe Print", cursive;
 }
-
 .bloc__page1 h2 {
-  font-family: 'Devonshire', cursive;
+  font-family: "Devonshire", cursive;
   margin-bottom: 3em;
 }
-
 .bloc__page1 .bloc__page1--h3 {
   text-align: center;
 }
-
 .bloc__page1 .bloc__page1--h3:before, .bloc__page1 .bloc__page1--h3:after {
   background: url("icon/ligne-menu-1.png") no-repeat;
   content: "";
@@ -495,33 +306,22 @@ footer a {
   width: 200px;
   height: 15px;
   background-size: 100%;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
 }
-
 .bloc__page1 .bloc__page1--h3--underline {
   /* soulignement des titres*/
   text-decoration: none;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(5%, black), color-stop(10%, transparent)) no-repeat left bottom/0 100%;
   background: linear-gradient(to top, black 5%, transparent 10%) no-repeat left bottom/0 100%;
-  -webkit-transition: background-size .5s;
-  transition: background-size .5s;
+  transition: background-size 0.5s;
 }
-
 .bloc__page1 .bloc__page1--h3--underline:hover {
   background-size: 100% 100%;
 }
 
 .bloc__page1--icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 .bloc__page1--icon i {
   margin-top: 20px;
   margin-right: 10px;
@@ -540,20 +340,17 @@ section i {
 .bloc.bloc__page2 {
   background-color: #edefef;
   padding-top: 30px;
-  font-family: 'Segoe Print', cursive;
+  font-family: "Segoe Print", cursive;
 }
-
 .bloc.bloc__page2 h2 {
-  font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
   font-size: 2.5em;
   color: #3d1319;
-  background-image: -webkit-gradient(linear, left top, right top, from(#0431df), to(#3d9ffa));
   background-image: linear-gradient(to right, #0431df, #3d9ffa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 2em;
 }
-
 .bloc.bloc__page2 .bloc__page2--h3:before, .bloc.bloc__page2 .bloc__page2--h3:after {
   background: url("icon/ligne-menu-2.png") no-repeat;
   content: "";
@@ -561,25 +358,17 @@ section i {
   width: 200px;
   height: 15px;
   background-size: 100%;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
 }
-
 .bloc.bloc__page2 .bloc__page2--h3:after {
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
+  transform: scaleX(-1);
 }
-
 .bloc.bloc__page2 .bloc__page2--h3--underline {
   /* soulignement des titres*/
   text-decoration: none;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(5%, #0431df), color-stop(10%, transparent)) no-repeat left bottom/0 100%;
   background: linear-gradient(to top, #0431df 5%, transparent 10%) no-repeat left bottom/0 100%;
-  -webkit-transition: background-size .5s;
-  transition: background-size .5s;
+  transition: background-size 0.5s;
 }
-
 .bloc.bloc__page2 .bloc__page2--h3--underline:hover {
   background-size: 100% 100%;
 }
@@ -588,22 +377,18 @@ section i {
 .bloc__page3 {
   background-color: #fff5fe;
   padding-top: 30px;
-  font-family: 'bree serif', serif;
+  font-family: "bree serif", serif;
 }
-
 .bloc__page3 h2 {
-  background-image: -webkit-gradient(linear, left top, right top, from(#df871e), to(#935df3));
   background-image: linear-gradient(to right, #df871e, #935df3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: 'Croissant One', cursive;
+  font-family: "Croissant One", cursive;
   margin-bottom: 3em;
 }
-
 .bloc__page3 .bloc__page3--entree {
   color: #c67412;
 }
-
 .bloc__page3 .bloc__page3--entree--h3:before, .bloc__page3 .bloc__page3--entree--h3:after {
   background: url("icon/ligne-menu-3-1.png") no-repeat;
   content: "";
@@ -611,16 +396,11 @@ section i {
   width: 200px;
   height: 15px;
   background-size: 100%;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
 }
-
 .bloc__page3 .bloc__page3--entree--h3:after {
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
+  transform: scaleX(-1);
 }
-
 .bloc__page3 .bloc__page3--plat--h3:before, .bloc__page3 .bloc__page3--plat--h3:after {
   background: url("icon/ligne-menu-3-2.png") no-repeat;
   content: "";
@@ -628,16 +408,11 @@ section i {
   width: 200px;
   height: 15px;
   background-size: 100%;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
 }
-
 .bloc__page3 .bloc__page3--plat--h3:after {
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
+  transform: scaleX(-1);
 }
-
 .bloc__page3 .bloc__page3--dessert--h3:before, .bloc__page3 .bloc__page3--dessert--h3:after {
   background: url("icon/ligne-menu-3-3.png") no-repeat;
   content: "";
@@ -645,61 +420,43 @@ section i {
   width: 200px;
   height: 15px;
   background-size: 100%;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
 }
-
 .bloc__page3 .bloc__page3--dessert--h3:after {
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
+  transform: scaleX(-1);
 }
-
 .bloc__page3 .bloc__page3--h3--entree--underline {
   /* soulignement des titres*/
   text-decoration: none;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(5%, #c67412), color-stop(10%, transparent)) no-repeat left bottom/0 100%;
   background: linear-gradient(to top, #c67412 5%, transparent 10%) no-repeat left bottom/0 100%;
-  -webkit-transition: background-size .5s;
-  transition: background-size .5s;
+  transition: background-size 0.5s;
 }
-
 .bloc__page3 .bloc__page3--h3--entree--underline:hover {
   background-size: 100% 100%;
 }
-
 .bloc__page3 .bloc__page3--plat {
   color: #a56799;
   margin-top: 70px;
 }
-
 .bloc__page3 .bloc__page3--h3--plat--underline {
   /* soulignement des titres*/
   text-decoration: none;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(5%, #a56799), color-stop(10%, transparent)) no-repeat left bottom/0 100%;
   background: linear-gradient(to top, #a56799 5%, transparent 10%) no-repeat left bottom/0 100%;
-  -webkit-transition: background-size .5s;
-  transition: background-size .5s;
+  transition: background-size 0.5s;
 }
-
 .bloc__page3 .bloc__page3--h3--plat--underline:hover {
   background-size: 100% 100%;
 }
-
 .bloc__page3 .bloc__page3--dessert {
   color: #6e4ccc;
   margin-top: 70px;
 }
-
 .bloc__page3 .bloc__page3--h3--dessert--underline {
   /* soulignement des titres*/
   text-decoration: none;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(5%, #6e4ccc), color-stop(10%, transparent)) no-repeat left bottom/0 100%;
   background: linear-gradient(to top, #6e4ccc 5%, transparent 10%) no-repeat left bottom/0 100%;
-  -webkit-transition: background-size .5s;
-  transition: background-size .5s;
+  transition: background-size 0.5s;
 }
-
 .bloc__page3 .bloc__page3--h3--dessert--underline:hover {
   background-size: 100% 100%;
 }
@@ -708,19 +465,16 @@ section i {
 .bloc__page4 {
   background-color: #fdfffd;
   padding-top: 30px;
-  font-family: 'Segoe Print', serif;
+  font-family: "Segoe Print", serif;
 }
-
 .bloc__page4 h2 {
-  font-family: 'Kaushan Script', cursive;
+  font-family: "Kaushan Script", cursive;
   font-size: 2.5em;
   margin-bottom: 2em;
-  background-image: -webkit-gradient(linear, left top, right top, from(#3d9339), to(#bfff7e));
   background-image: linear-gradient(to right, #3d9339, #bfff7e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 .bloc__page4 .bloc__page4--h3:before, .bloc__page4 .bloc__page4--h3:after {
   background: url("icon/ligne-menu-4.png") no-repeat;
   content: "";
@@ -728,25 +482,17 @@ section i {
   width: 200px;
   height: 15px;
   background-size: 100%;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
 }
-
 .bloc__page4 .bloc__page4--h3:after {
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
+  transform: scaleX(-1);
 }
-
 .bloc__page4 .bloc__page4--h3--underline {
   /* soulignement des titres*/
   text-decoration: none;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(5%, #3d9339), color-stop(10%, transparent)) no-repeat left bottom/0 100%;
   background: linear-gradient(to top, #3d9339 5%, transparent 10%) no-repeat left bottom/0 100%;
-  -webkit-transition: background-size .5s;
-  transition: background-size .5s;
+  transition: background-size 0.5s;
 }
-
 .bloc__page4 .bloc__page4--h3--underline:hover {
   background-size: 100% 100%;
 }
@@ -759,11 +505,9 @@ section i {
   font-size: larger;
   margin-bottom: 130px;
 }
-
 .mentions-legales h2 {
   font-size: 2rem;
 }
-
 .mentions-legales span {
   font-style: italic;
   color: red;
@@ -774,30 +518,51 @@ section i {
   body {
     width: auto;
   }
-  header {
-    padding: 1px;
-    margin: auto;
-  }
-  main {
+
+  y main {
     width: auto;
   }
+
   .main__accueil {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
+
   .main__accueil > div {
     margin-top: 0em;
   }
+
   .bloc-menu {
     width: 85vw;
     height: 110vw;
     text-align: center;
   }
-  
+
+  .bloc {
+    width: 85vw;
+    font-size: 3vw;
+  }
+  .bloc article {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  .bloc h3 {
+    font-size: 3vw;
+  }
+  .bloc p {
+    font-size: 3vw;
+    margin: inherit;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100px;
+  }
+  footer div {
+    display: block;
+  }
 }
+
 /*# sourceMappingURL=style.css.map */
