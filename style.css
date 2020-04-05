@@ -199,7 +199,7 @@ a {
   width: 250px;
   height: 45px;
   margin: auto;
-  margin-bottom: 100px;
+  margin-bottom: 120px;
   border-radius: 10px;
   font-family: "inter", sans-serif;
   text-align: center;
@@ -527,6 +527,10 @@ section i {
     width: auto;
   }
 
+  .main h2 {
+    font-size: 7vw;
+  }
+
   .main__accueil {
     display: flex;
     flex-direction: column;
@@ -541,23 +545,32 @@ section i {
     height: 110vw;
     text-align: center;
   }
+  .bloc-menu h2 {
+    font-family: sans-serif;
+  }
 
   .bloc {
+    text-align: center;
     width: 85vw;
   }
   .bloc article {
     margin-left: 40px;
     margin-right: 40px;
   }
+  .bloc h2 {
+    font-size: 7vw;
+  }
   .bloc h3 {
-    font-size: 4vw;
+    font-size: 5vw;
   }
   .bloc p {
-    font-size: 2vw;
-    margin: inherit;
+    font-size: 4vw;
+    line-height: 2.2;
   }
   .bloc span {
-    font-size: 3vw;
+    display: flex;
+    justify-content: center;
+    font-size: 4vw;
   }
 
   footer {

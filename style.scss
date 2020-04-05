@@ -236,7 +236,7 @@ a {
 	width: 250px;
 	height: 45px;
     margin: auto;
-    margin-bottom: 100px;
+    margin-bottom: 120px;
     border-radius: 10px;
     
     font-family: 'inter', sans-serif;
@@ -571,6 +571,9 @@ section i {
 	main{	
 		width: auto;
     }
+    .main h2{
+        font-size: 7vw;
+    }
     
 	.main__accueil{
 		display: flex;
@@ -584,25 +587,39 @@ section i {
 	.bloc-menu{
 		width: 85vw;
 		height: 110vw;
-		text-align: center;
+        text-align: center;
+        
+        h2{
+            font-family: sans-serif;
+            
+        }
     }
     .bloc{
+        text-align: center;
         width: 85vw;
+
         article{
             margin-left: 40px;
             margin-right: 40px;
         }
 
+        h2{
+            font-size: 7vw;
+
+        }
+
         h3{
-            font-size: 4vw;
+            font-size: 5vw;
         }  
 
             p{
-                font-size: 2vw;
-                margin: inherit;
+                font-size: 4vw;
+                line-height: 2.2;
             }
             span{
-                font-size: 3vw;
+                display: flex;
+                justify-content: center;
+                font-size: 4vw;
             }
     }
  
