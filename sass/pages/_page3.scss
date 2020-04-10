@@ -1,0 +1,84 @@
+/*---PAGE MENU 3-- Le chic à la française --*/
+
+.bloc__page3{
+	background-color: #fff5fe;
+	padding-top: 30px;
+	font-family: 'bree serif', serif;
+
+     h2{
+        background-image: linear-gradient(to right, #df871e, #935df3);
+        @include gradient;
+        font-family: 'Croissant One', cursive;
+        margin-bottom: 3em;
+    }
+
+}
+.bloc__page3--entree{
+    color: $color-txt-menu3;	
+
+    .bloc__page3--entree--h3:before, .bloc__page3--entree--h3:after{
+        background:url("../icon/ligne-menu-3-1.png") no-repeat;
+        @include ligne-verticale;
+    }
+    .bloc__page3--entree--h3:after{
+        transform: scaleX(-1);
+    }
+
+    .bloc__page3--h3--entree--underline{  /* soulignement des titres*/
+        text-decoration: none;
+        background: linear-gradient(to top, $color-txt-menu3 5%, transparent 10%) no-repeat left bottom / 0 100%;
+        transition: background-size .5s;
+    }
+        .bloc__page3--h3--entree--underline:hover{
+                background-size: 100% 100%;
+            }
+}
+
+.bloc__page3--plat{
+    color: $color-txt-menu3-plat;
+    margin-top: 70px;
+
+    .bloc__page3--plat--h3:before, .bloc__page3--plat--h3:after{
+        background:url("../icon/ligne-menu-3-2.png") no-repeat;
+        @include ligne-verticale;
+    }
+    .bloc__page3--plat--h3:after{
+        transform: scaleX(-1);
+    }
+    .bloc__page3--h3--plat--underline{  /* soulignement des titres*/
+        text-decoration: none;
+        background: linear-gradient(to top, $color-txt-menu3-plat 5%, transparent 10%) no-repeat left bottom / 0 100%;
+        transition: background-size .5s;
+    }
+        .bloc__page3--h3--plat--underline:hover{
+                background-size: 100% 100%;
+            }
+}
+
+.bloc__page3--dessert{
+    color: $color-txt-menu3-dessert;
+    margin-top: 70px;
+
+    .bloc__page3--dessert--h3:before, .bloc__page3--dessert--h3:after{
+        background:url("../icon/ligne-menu-3-3.png") no-repeat;
+        @include ligne-verticale;
+    }
+    .bloc__page3--dessert--h3:after{
+        transform: scaleX(-1);
+    }
+
+    .bloc__page3--h3--dessert--underline{  /* soulignement des titres*/
+        text-decoration: none;
+        background: linear-gradient(to top, $color-txt-menu3-dessert 5%, transparent 10%) no-repeat left bottom / 0 100%;
+        transition: background-size .5s;
+    }
+        .bloc__page3--h3--dessert--underline:hover{
+            background-size: 100% 100%;
+        }
+}
+
+        
+
+
+    
+ 

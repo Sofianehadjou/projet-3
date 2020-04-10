@@ -1,0 +1,53 @@
+/*---footer---*/
+
+footer {
+	font-family: 'inter', sans-serif;
+	color: #fdcb46;
+	background-color: #579c87;
+	 
+	position: fixed;
+	left: 0; right: 0; bottom: 0px;
+    height: 80px;
+
+    div{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+        a{
+            color: #fdcb46;
+            text-decoration: none;
+        }
+
+}
+
+.mentions:hover,.contact:hover{
+    animation: wiggle 3s infinite;  
+}
+@keyframes wiggle{ /*Animation rubrique mentions légales et contact sous forme de 'wiggle'*/
+
+    0%{transform: rotate(0deg);}
+    2%{transform: rotate(-2deg);}
+    4%{transform: rotate(2deg);}
+    5%{transform: rotate(0deg);}
+    10%{transform: rotate(-2deg);}
+    50%{transform: rotate(2deg);}
+    75%{transform: rotate(0deg);}
+    100%{transform: rotate(-2deg);}
+}
+
+@media all and (max-width: 992px)
+{ 
+    footer{
+        font-size: 3.5vw;
+        letter-spacing: -0.074em;
+        position: sticky;
+        height: auto;
+        
+        h2{
+            padding-top: 10px;
+        }
+    }
+
+}

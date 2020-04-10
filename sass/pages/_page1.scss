@@ -1,0 +1,59 @@
+/*--- PAGE MENU 1-- La note enchantée --*/
+
+.bloc__page1{
+	background-color: $color-bk-menu1;
+    font-family: 'Segoe Print', cursive;
+
+    h2{
+        font-family:'Devonshire', cursive;
+        margin-bottom: 3em;
+    }
+
+    .bloc__page1--h3{
+        text-align: center;	 
+    }
+
+    .bloc__page1--h3:before, .bloc__page1--h3:after{
+        background:url("../icon/ligne-menu-1.png") no-repeat;
+        @include ligne-verticale;    
+    }
+
+    .bloc__page1--h3--underline{  /* soulignement des titres*/
+        text-decoration: none;
+        background: linear-gradient(to top, black 5%, transparent 10%) no-repeat left bottom / 0 100%;
+        transition: background-size .5s;
+    }
+        .bloc__page1--h3--underline:hover{
+            background-size: 100% 100%;
+        }
+}
+
+.bloc__page1--icon{
+    display: flex;
+    justify-content: center;
+
+    i{
+        margin-top: 30px;
+        margin-right: 10px;
+        font-size: 25px;
+        color: tomato;
+    }
+}
+
+@media all and (max-width: 992px)
+{ 
+    .bloc__page1--icon i{
+        margin-top: 75px;
+        margin-right: 30px;
+        font-size: 55px;
+    }
+}
+
+
+section i {
+       margin-left: 50%;
+       font-size: 2em;
+       color: tomato;
+
+       margin-top: 50px;
+}

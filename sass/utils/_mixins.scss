@@ -1,0 +1,19 @@
+@mixin flexMid {
+    display: flex;
+    justify-content: center;    
+    align-content: center;
+}
+
+@mixin gradient {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin ligne-verticale {
+    content:"";
+    display:inline-block;
+    width:200px;
+    height:15px;
+    background-size:100%;
+    align-self: center;
+}

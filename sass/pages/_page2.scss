@@ -1,0 +1,36 @@
+/*---PAGE MENU 2-- Le délice des papilles --*/
+
+.bloc.bloc__page2{
+	background-color: #edefef;
+	padding-top: 30px;
+	font-family: 'Segoe Print', cursive;
+
+    h2{
+        font-family: 'Dancing Script', cursive;
+        font-size: 2.5em;
+        color: #3d1319;
+        
+        background-image: linear-gradient(to right, #0431df, #3d9ffa);
+        @include gradient;
+
+        margin-bottom: 2em;
+    }
+
+    .bloc__page2--h3:before, .bloc__page2--h3:after{
+        background:url("../icon/ligne-menu-2.png") no-repeat;
+        @include ligne-verticale;
+    }
+    
+    .bloc__page2--h3:after{
+        transform: scaleX(-1);
+    }
+
+    .bloc__page2--h3--underline{  /* soulignement des titres*/
+        text-decoration: none;
+        background: linear-gradient(to top, $color-txt-menu2 5%, transparent 10%) no-repeat left bottom / 0 100%;
+        transition: background-size .5s;
+    }
+        .bloc__page2--h3--underline:hover{
+            background-size: 100% 100%;
+        }
+}

@@ -1,0 +1,123 @@
+/*---MAIN page d'accueil---*/
+
+.main__accueil {
+    @include flexMid;
+    
+     div { 
+		margin-top: 3em;
+	}
+}
+
+
+.bloc-menu__1 { /*---MENU 1-- La note enchantée --*/
+
+	background-color: $color-bk-menu1;
+    font-family: cursive;
+    
+	h3 {
+		font-family:'Devonshire', cursive;
+		font-weight: normal;
+		font-size: 2em;
+    }
+
+    i {
+        font-size: 2em;
+        margin-top: -40px;
+        color: tomato;
+    }
+}
+
+
+.bloc-menu__2 { /*---MENU 2-- Le délice des papilles --*/
+
+	font-family: 'Kalam', cursive;
+	background-color: $color-bk-menu2;	
+	color: $color-txt-menu2 ;
+
+	h3 {
+		font-family: 'Dancing Script', cursive;
+		font-size: 2em;
+
+		background-image: linear-gradient(to right, #0431df, #3d9ffa);
+	    @include gradient;
+	}
+}
+
+
+.bloc-menu__3 { /*---MENU 3-- Le chic à la française --*/
+
+	background-color: $color-bk-menu3;
+	font-family: serif , cursive;
+    color: $color-txt-menu3;
+    
+    h3 {
+		font-size: 2em;
+
+		background-image: linear-gradient(to right, $color-txt-menu3, #935df3);
+	    @include gradient;
+    }
+}
+
+
+
+.bloc-menu__4 { /*---MENU 4-- La palette du goût --*/
+	background-color: $color-bk-menu4;
+	font-family: 'Kalam', cursive;
+    color: $color-txt-menu4;
+    
+	h3{
+		font-family: 'Kaushan Script', cursive;
+		font-size: 2em;
+
+		background-image: linear-gradient(to right, #3d9339, #bfff7e);
+        @include gradient
+    }
+}
+
+
+/*.MAIN pages 1 à 4*/
+
+.main{
+    margin-bottom: 120px;
+    
+     h2{
+         font-family: sans-serif;
+        text-align: center;
+    }
+
+    span {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top: -20px;
+    }
+
+    article{
+        margin-left: 80px;
+        margin-right: 80px;
+     }
+
+    h3{
+        @include flexMid;
+		justify-content: space-between;
+	}
+}
+@media all and (max-width: 992px)
+{ 
+	main{	
+		width: auto;
+    }
+    
+    .main h2{
+        font-size: 7vw;
+    }
+    
+	.main__accueil{
+		display: flex;
+		flex-direction: column;
+    }
+    
+	.main__accueil > div{
+		margin-top: 0em;
+	}
+
+}

@@ -1,0 +1,32 @@
+/*---PAGE MENU 4-- La palette du goût --*/
+
+.bloc__page4{
+	background-color: #fdfffd;
+	padding-top: 30px;
+    font-family: 'Segoe Print', serif;
+
+    h2{
+        font-family: 'Kaushan Script', cursive;
+        font-size: 2.5em;
+        margin-bottom: 2em;
+        background-image: linear-gradient(to right, #3d9339, #bfff7e);
+        @include gradient;
+    }
+
+    .bloc__page4--h3:before, .bloc__page4--h3:after{
+        background:url("../icon/ligne-menu-4.png") no-repeat;
+        @include ligne-verticale;
+    }
+    .bloc__page4--h3:after{
+        transform: scaleX(-1);        
+    }
+
+    .bloc__page4--h3--underline{  /* soulignement des titres*/
+        text-decoration: none;
+        background: linear-gradient(to top, $color-txt-menu4 5%, transparent 10%) no-repeat left bottom / 0 100%;
+        transition: background-size .5s;
+    }
+        .bloc__page4--h3--underline:hover{
+            background-size: 100% 100%;
+         }
+}
